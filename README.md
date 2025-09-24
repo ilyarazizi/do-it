@@ -1,7 +1,8 @@
 # do-it 
 a beautiful and responsive todo list web app 🎯
 
-built with **node js** and **express js** 
+backend: **node js(express js)**
+frontend: **html css javascript(no frameworks in frontend)**
 
 
 
@@ -10,4 +11,5 @@ built with **node js** and **express js**
 
 - using mongodb database
 - responsive design
-- rest API for sinding and receiving data
+- rest API for sending and receiving data
+- using jwt authorization
