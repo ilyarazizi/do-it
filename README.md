@@ -2,6 +2,7 @@
 a beautiful and responsive todo list web app 🎯
 
 backend: **node js(express js)**
+
 frontend: **html css javascript(no frameworks in frontend)**
 
 
