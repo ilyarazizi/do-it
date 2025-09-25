@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/register-style.css">
+        <title>Register</title>
+    </head>
+    <body>
+        
+        <header>
+            <h1 class="header-h1">do-it</h1>
+
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="/login">login / sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <form class="login-container" id="submit-form">
+
+                
+                <div id="form">
+                    <h2>Sign up here</h2>
+
+                    <p>enter your information below</p>
+   
+                    <input type="text" placeholder="firstname" required id="fname-in">
+                    <input type="text" placeholder="lastname" required id="lname-in">
+   
+
+
+                    <input type="email" required placeholder="email" id="email-in">                
+                 
+                    <input type="password" required placeholder="password" id="pass-in">
+                    <button type="button" id="pass-btn">🔒</button>
+
+                    <div class="notif-container">
+                        <p id="notif-p"></p>
+                    </div>
+                    
+                    <div class="button-container">
+                        <button type="submit">Sign up</button>
+                    </div>
+
+                    
+                    
+                </div>
+            </form>
+        </main>
+
+        <script src="/scripts/register.js" defer></script>
+    </body>
+</html>

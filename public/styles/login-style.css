@@ -1,0 +1,168 @@
+* {
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)),
+    url("../photo2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(43, 43, 43, 0.6);
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-h1 {
+    margin-left: 10px;
+    margin-top: 3px;
+    font-size: 2.2em;
+    color: rgb(20, 187, 20);
+}
+
+.navbar {
+    display: flex;
+    margin-top: 15px;
+    margin-right: 100px;
+   
+}
+
+li {
+    margin-left: 100px;
+    list-style-type: none;
+
+}
+
+
+li a {
+    color: white;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+a:hover {
+
+    color: rgb(20, 187, 20);
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+
+    width: 28vw;
+    height: 300px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+
+}
+
+form {
+    width: 17vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+h2 {
+
+    text-align: center;
+    margin-top: 10px;
+}
+
+input {
+
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(143, 143, 143, 0.5);
+    border-radius: 3px;
+    background-color: rgba(48, 48, 48, 0.1);
+    height: 25px;
+    margin-top: 25px;
+    color: white;
+    font-size: 1.01em;
+    padding-left: 3px;
+
+
+}
+
+.button-container {
+
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin-top: 25px;
+    height: 25px;
+    width: 10vw;
+    font-size: 1.03em;
+    color: white;
+    background-color: rgba(14, 129, 14, 0.8);
+    border: 1px solid rgba(14, 129, 14, 0.8);
+    border-radius: 3px;
+    transition: 1s background-color;
+}
+
+.button-container button:hover {
+
+    background-color: black;
+}
+
+p {
+
+    text-align: center;
+    margin-top: 20px;
+}
+
+span a{
+
+    color: rgb(20, 187, 20);
+}
+
+#pass-in {
+
+    position: relative;
+
+}
+
+#pass-btn {
+
+    position: absolute;
+    background-color: rgba(10, 10, 10, 0.1);
+    border: none;
+    margin-top: 113px;
+    margin-left: 200px;
+    font-size: 1.03em;
+}
+
+#notif-p {
+
+    text-align: center;
+}
+
+.p-container {
+
+    width: 100;
+}

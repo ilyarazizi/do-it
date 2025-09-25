@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/login-style.css">
+        <title>Login</title>
+    </head>
+    <body>
+        
+        <header>
+            <h1 class="header-h1">do-it</h1>
+
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="/login">login / sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <div class="login-container" id="login-container">
+
+                
+                <form id="form">
+                    <h2>Login here</h2>
+   
+                    <input type="email" name="email" required placeholder="email" id="email-in">                
+                 
+                    <input type="password" required name="password" placeholder="password" id="pass-in">
+                    <button type="button" id="pass-btn">🔒</button>
+                    <div class="button-container">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="p-container">
+                        <p id="notif-p"></p>
+                    </div>
+                    
+
+                    <p>dont have any account ?<br>
+                    sign up <span><a href="/register">here</a></span></p>
+                </form>
+            </div>
+        </main>
+
+        <script src="/scripts/login.js" defer></script>
+    </body>
+</html>

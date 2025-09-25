@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        <link rel="stylesheet" href="/styles/to-do-list-style.css">
+        <title>do-it</title>
+        <script src="/scripts/authorization.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <h1 class="header-h1">do-it</h1>
+
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="/login">login / sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+ 
+            <button class="add">add task</button>
+
+
+            <div class="list-container">
+                
+                <div class="list">
+                    <h2>Tasks</h2>
+                    <div class="list-item">
+                        <button type="button" class="check" id="check">⭕</button>
+                        <textarea class="text-in" spellcheck="false" placeholder="type here.."></textarea>
+                        <button type="button" class="delete" id="delete">✖️</button>
+                    </div>
+                  
+                    
+               
+                    <div class="list-item">
+                        <button type="button" class="check" id="check">⭕</button>
+                        <textarea class="text-in" spellcheck="false" placeholder="type here.."></textarea>
+                        <button class="delete" id="delete">✖️</button>
+                    </div>
+            
+
+                </div>
+
+            </div>
+        </main>
+
+        <script src="/scripts/to-do-list.js"></script>
+    </body>
+</html>

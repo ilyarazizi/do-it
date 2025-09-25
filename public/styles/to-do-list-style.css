@@ -1,0 +1,173 @@
+* {
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)),
+    url("../photo3.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(43, 43, 43, 0.6);
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-h1 {
+    margin-left: 10px;
+    margin-top: 3px;
+    font-size: 2.2em;
+    color: rgb(20, 187, 20);
+}
+
+.navbar {
+    display: flex;
+    margin-top: 15px;
+    margin-right: 100px;
+   
+}
+
+li {
+    margin-left: 100px;
+    list-style-type: none;
+
+}
+
+
+li a {
+    color: white;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+a:hover {
+
+    color: rgb(20, 187, 20);
+}
+
+main {
+
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-container {
+
+    width: 90vw;
+    min-height: 85vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 8px;  
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.list-item {
+    position: relative;
+    width: 70vw;
+    min-height:50px;
+    background-color: rgba(73, 73, 73, 0.8);
+    border: 1px solid rgba(122, 122, 122, 0.8);
+    border-radius: 8px ;
+    margin-top: 15px;
+    color: white;
+    display: flex;
+    
+}
+
+.work {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 1.5em;
+}
+
+.striked {
+
+    text-decoration: line-through;
+}
+
+.check {
+    position: absolute;
+    font-size: 2em;
+    right: 71vw;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.check:hover {
+
+    cursor: pointer;
+}
+
+.text-in {
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    height: 40px;
+    width: 60vw;
+    padding-top: 10px;
+    overflow-x: auto;
+    resize: none;
+    
+}
+
+.delete {
+
+    position: absolute;
+    font-size: 2em;
+    color: red;
+    right: 2vw;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+h2 {
+
+    text-align: center;
+    color: rgb(20, 187, 20);
+    font-size: 2em;
+}
+
+.add {
+
+    width: 10vw;
+    height: 50px;
+    margin-right: 70vw;
+    margin-top: 15px;
+    background-color: rgba(110, 110, 110, 0.8);
+    color: white;
+    border: 1px solid rgba(219, 217, 217, 0.8);
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.add:hover {
+
+    background-color: black;
+}
