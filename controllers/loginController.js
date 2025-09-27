@@ -9,7 +9,7 @@ async function loginHandler(req, res) {
     const pass = req.body.password;
 
     if (!email || ! pass) {
-
+    
         return res.status(400).json({"code": 400});
     }
 

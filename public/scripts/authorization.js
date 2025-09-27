@@ -1,4 +1,4 @@
-let accessToken = null;
+export let accessToken = null;
 
 async function refresh() {
 
@@ -15,6 +15,7 @@ async function refresh() {
     if (result.code === 200) {
 
         accessToken = result.accessToken;
+        console.log(accessToken);
 
     } else {
 
@@ -22,7 +23,8 @@ async function refresh() {
     }
 }
 
-async function auth() {
+export async function auth() {
+
 
     const res = await fetch("http://localhost:3500/authorization", {
     
@@ -39,12 +41,10 @@ async function auth() {
 
     if (result.code === 403) {
 
-        refresh();
+        await refresh();
 
     } else {
 
         console.log("ok");
     }
 }
-
-auth();

@@ -14,7 +14,7 @@ async function handeNewUser(req, res) {
         return res.status(400).json({"code" : "400"});
     }
 
-    const duplicate = await user.findOne({"email": email}).exec();
+    const duplicate = await user.findOne({"email": email});
 
     if (duplicate) {
 

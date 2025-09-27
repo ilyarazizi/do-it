@@ -10,6 +10,8 @@ const cookieParser = require("cookie-parser");
 const listRout = require("./routes/listRout");
 const privateRouter = require("./routes/privateDataRout");
 const refreshRouter = require("./routes/refreshRout");
+const tasksRouter = require("./routes/tasksRout");
+const getTasksRouter = require("./routes/getTasksrout");
 
 const cors = require("cors");
 app.use(cors({
@@ -31,6 +33,8 @@ app.use("/login-handle", loginAPIrouter);
 app.use("/to-do-list", listRout);
 app.use("/authorization", privateRouter);
 app.use("/authorization-refresh", refreshRouter);
+app.use("/save-tasks", tasksRouter);
+app.use("/get-tasks", getTasksRouter);
 
 
 app.use((req, res, next) => {

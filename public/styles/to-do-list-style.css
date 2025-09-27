@@ -152,12 +152,18 @@ h2 {
     font-size: 2em;
 }
 
+.add-save {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
 .add {
 
     width: 10vw;
     height: 50px;
-    margin-right: 70vw;
-    margin-top: 15px;
     background-color: rgba(110, 110, 110, 0.8);
     color: white;
     border: 1px solid rgba(219, 217, 217, 0.8);
@@ -165,9 +171,38 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 1s;
+    margin-left: 8vw;
+}
+
+.save {
+    width: 10vw;
+    height: 50px;
+    background-color: rgba(0, 161, 8, 0.8);
+    color: white;
+    border: 1px solid rgba(219, 217, 217, 0.8);
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s;
+    margin-right: 8vw;
+    transition: background-color 1s;
+
+}
+
+.save:hover {
+
+    background-color: rgba(39, 219, 48, 0.8);
 }
 
 .add:hover {
 
     background-color: black;
+}
+
+.add-save p {
+
+    color:  white;
+    font-size: 1.5em;
+    padding-top: 10px;
+    text-align: center;
 }

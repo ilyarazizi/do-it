@@ -6,7 +6,7 @@
       
         <link rel="stylesheet" href="/styles/to-do-list-style.css">
         <title>do-it</title>
-        <script src="/scripts/authorization.js"></script>
+        <script type="module" src="/scripts/authorization.js"></script>
     </head>
     <body>
         
@@ -24,8 +24,13 @@
         </header>
 
         <main>
- 
-            <button class="add">add task</button>
+            
+            <div class="add-save">
+                <button class="add" type="button">add task</button>
+                <p>Be sure to click the save button before exiting the program</p>
+                <button class="save" type="button">save</button>
+            </div>
+            
 
 
             <div class="list-container">
@@ -38,20 +43,11 @@
                         <button type="button" class="delete" id="delete">✖️</button>
                     </div>
                   
-                    
-               
-                    <div class="list-item">
-                        <button type="button" class="check" id="check">⭕</button>
-                        <textarea class="text-in" spellcheck="false" placeholder="type here.."></textarea>
-                        <button class="delete" id="delete">✖️</button>
-                    </div>
-            
-
                 </div>
 
             </div>
         </main>
 
-        <script src="/scripts/to-do-list.js"></script>
+        <script type="module" src="/scripts/to-do-list.js"></script>
     </body>
 </html>

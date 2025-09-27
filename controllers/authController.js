@@ -7,7 +7,6 @@ function privateData(req, res) {
     const token = header && header.split(" ")[1];
 
     if (!token) {
-
         return res.status(403).json({"code": 403});
     }
 
@@ -18,9 +17,11 @@ function privateData(req, res) {
             return res.status(403).json({"code": 403});
         }
 
+        res.status(200).json({"code": 200});
+
     });
 
-    res.status(200).json({"code": 200});
+    
 }
 
 function refresh(req, res) {
@@ -29,14 +30,12 @@ function refresh(req, res) {
     let email = null;
 
     if (!token) {
-
         return res.status(403).json({"code": 403});
     }
 
     jwt.verify(token, process.env.REFRESH_TOKEN_SECRET, (err, data) => {
 
         if (err) {
-
             return res.status(403).json({"code": 403});
         }
 
