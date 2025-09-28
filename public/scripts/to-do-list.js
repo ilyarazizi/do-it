@@ -22,7 +22,7 @@ function setTasks(count, tasks, isDone) {
 
         } else {
             console.log("hello");
-            clone.querySelector(".check").innerHTML = "⭕";
+            clone.querySelector(".check").innerHTML = "⚪";
             clone.querySelector(".text-in").classList.remove("striked");
             clone.querySelector(".text-in").disabled = false;
         }
@@ -130,7 +130,7 @@ list.addEventListener("click", (event) => {
 
 
 
-                if (event.target.innerHTML === "⭕") {
+                if (event.target.innerHTML === "⚪") {
 
                     event.target.innerHTML = "✔️";
                     const p = event.target.nextElementSibling;
@@ -139,7 +139,7 @@ list.addEventListener("click", (event) => {
                     p.disabled = true;
     
                 } else {
-                    event.target.innerHTML = "⭕";
+                    event.target.innerHTML = "⚪";
                     const p = event.target.nextElementSibling;
                     p.classList.remove("striked");
 
@@ -175,7 +175,7 @@ for (let i of input) {
 function addTask() {
 
     const clone = item.cloneNode(true);
-    clone.querySelector(".check").innerHTML = "⭕";
+    clone.querySelector(".check").innerHTML = "⚪";
     clone.querySelector(".text-in").classList.remove("striked");
     clone.querySelector(".text-in").disabled = false;
     clone.querySelector(".text-in").value = "";
@@ -185,7 +185,7 @@ function addTask() {
 
 add.addEventListener("click", () => {
     const clone = item.cloneNode(true);
-    clone.querySelector(".check").innerHTML = "⭕";
+    clone.querySelector(".check").innerHTML = "⚪";
     clone.querySelector(".text-in").classList.remove("striked");
     clone.querySelector(".text-in").disabled = false;
     clone.querySelector(".text-in").value = "";

@@ -8,6 +8,8 @@ async function handle(req, res) {
     const token = header && header.split(" ")[1];
     let email = null;
 
+    console.log(tasks);
+
     if (!token) {
         return res.status(403).json({"code": 403});
     }
@@ -19,12 +21,12 @@ async function handle(req, res) {
 
             return res.status(403).json({"code": 403});
         }
-        email = data.email;
 
         if (!tasks) {
-
             return res.status(200).json({"code": 200, "massege": "empty"});
         }
+
+        email = data.email;
     });
 
 
@@ -48,14 +50,21 @@ async function handle(req, res) {
     
         for (let i = 0; i < tasks.length; i++) {
     
-            user.userTasks.push({
-    
-                "userTask": tasks[i].userTask,
-                "isDone": tasks[i].isDone
+            if (tasks[i].userTask) {
+
+                user.userTasks.push({
+        
+                    "userTask": tasks[i].userTask,
+                    "isDone": tasks[i].isDone
             });
+
+            }
+
+
         }
 
         await user.save();
+        console.log(user);
         res.status(200).json({"code": 200});
 
 
