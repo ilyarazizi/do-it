@@ -4,8 +4,66 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>page not found</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background: #f0f0f0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                text-align: center;
+            }
+
+            .container {
+                max-width: 600px;
+            }
+
+            h1 {
+                font-size: 8rem;
+                margin: 0;
+                color: green;
+                animation: float 2s infinite ease-in-out;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin: 20px 0;
+                color: #333;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 12px 24px;
+                background: green;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 8px;
+                transition: background 0.3s ease;
+            }
+
+            a:hover {
+            background: #0f0f0f;
+            }
+
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-15px);
+                }
+            }
+        </style>
     </head>
     <body>
-        <h1>page not found</h1>
+        <div class="container">
+            <h1>404</h1>
+            <p>sorry, page not found</p>
+            <a href="/">return to home page</a>
+        </div>
     </body>
 </html>
