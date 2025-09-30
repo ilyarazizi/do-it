@@ -66,7 +66,7 @@ main {
 
 .login-container {
 
-    width: 28vw;
+    width:300px;
     height: 300px;
     margin-top: 100px;
     display: flex;
@@ -78,10 +78,11 @@ main {
 }
 
 form {
-    width: 17vw;
+    width: 250px;
     color: white;
     display: flex;
     flex-direction: column;
+    position: relative;
 
 }
 
@@ -141,20 +142,15 @@ span a{
     color: rgb(20, 187, 20);
 }
 
-#pass-in {
-
-    position: relative;
-
-}
 
 #pass-btn {
 
     position: absolute;
     background-color: rgba(10, 10, 10, 0.1);
     border: none;
-    margin-top: 113px;
-    margin-left: 200px;
     font-size: 1.03em;
+    right: 20px;
+    top: 112px;
 }
 
 #notif-p {
@@ -164,5 +160,130 @@ span a{
 
 .p-container {
 
-    width: 100;
+    width: 100%;
+}
+
+@media screen and (min-width: 320px) and ( max-width: 700px) {
+    header {
+
+        flex-direction: column;
+        justify-items: center;
+
+    }
+    .header-h1 {
+
+        text-align: center;
+        font-size: 2.5em;
+
+    }
+
+
+    .main-p {
+
+
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    ul {
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li {
+
+        font-size: 1.4em;
+}
+    .login-container {
+        margin-top: 150px;
+        width: 300px;
+    }
+
+    form {
+
+        width: 250px;
+
+    }
+
+
+    .button-container button {
+
+        width: 90px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 701px) and ( max-width: 1000px) {
+    header {
+
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+
+
+    }
+
+
+    .header-h1 {
+
+        text-align: center;
+    }
+
+    ul {
+
+        margin-bottom: 30px;
+    }
+
+    .login-container {
+        margin-top: 150px;
+        width: 300px;
+    }
+
+    form {
+
+        width: 250px;
+
+    }
+
+
+    .button-container button {
+
+        width: 90px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1350px) and ( max-width: 1920px) {
+    body {
+
+        font-size: 1.2em;
+    }
+
+    .login-container {
+
+        width: 350px;
+        height: 350px;
+
+    }
+
+    input {
+
+        height: 30px;
+    }
+
+    #pass-btn {
+
+        top: 123px;
+    }
+
+    form {
+
+        width: 300px;
+    }
+
 }

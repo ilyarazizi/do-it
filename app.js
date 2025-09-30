@@ -12,6 +12,7 @@ const privateRouter = require("./routes/privateDataRout");
 const refreshRouter = require("./routes/refreshRout");
 const tasksRouter = require("./routes/tasksRout");
 const getTasksRouter = require("./routes/getTasksrout");
+const aboutRouter = require("./routes/aboutRout");
 
 const cors = require("cors");
 app.use(cors({
@@ -35,7 +36,7 @@ app.use("/authorization", privateRouter);
 app.use("/authorization-refresh", refreshRouter);
 app.use("/save-tasks", tasksRouter);
 app.use("/get-tasks", getTasksRouter);
-
+app.use("/about", aboutRouter);
 
 app.use((req, res, next) => {
 

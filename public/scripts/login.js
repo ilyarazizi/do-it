@@ -49,6 +49,7 @@ submit.addEventListener("submit", async (e) => {
         accessToken = result.accessToken;
         notif.style.color = "rgb(20, 187, 20)";
         notif.innerHTML = "loged in succsessfully";
+        window.location.replace("http://localhost:3500/to-do-list");
 
 
     } else if (result.code === 400) {

@@ -127,7 +127,7 @@ main {
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 10px;
     height: 40px;
-    width: 60vw;
+    width: 55vw;
     padding-top: 10px;
     overflow-x: auto;
     resize: none;
@@ -205,4 +205,137 @@ h2 {
     font-size: 1.5em;
     padding-top: 10px;
     text-align: center;
+}
+
+.alert {
+
+    width: 100vw;
+    visibility: hidden;
+    position: fixed;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: opacity 0.5s;
+
+}
+
+.alert.show {
+
+    opacity: 0;
+}
+
+.alert h2 {
+
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 320px) and ( max-width: 700px) {
+
+    body {
+
+        font-size: 0.7em;
+    }
+
+    header {
+
+        flex-direction: column;
+        justify-items: center;
+
+    }
+    .header-h1 {
+
+        text-align: center;
+        font-size: 2.5em;
+
+    }
+
+
+    .main-p {
+
+
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    ul {
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li {
+
+        font-size: 1.4em;
+}
+    .login-container {
+        margin-top: 150px;
+        width: 300px;
+    }
+
+    form {
+
+        width: 250px;
+
+    }
+
+
+    .button-container button {
+
+        width: 90px;
+    }
+
+
+    .list-container {
+
+        margin-top: 60px;
+    }
+
+    .add-save {
+
+        margin-top: 80px;
+        background-color: rgba(50, 50, 50, 0.8);
+        
+    }
+
+    .add-save button {
+
+        width: 130px;
+        margin-top: 10px;
+        height: 40px;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 701px) and ( max-width: 1000px) {
+    header {
+
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+
+
+    }
+
+
+    .header-h1 {
+
+        text-align: center;
+    }
+
+    ul {
+
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1800px) and ( max-width: 2000px) {
+
+
+    body {
+
+        font-size: 1.2em;
+    }
 }

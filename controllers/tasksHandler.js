@@ -8,8 +8,6 @@ async function handle(req, res) {
     const token = header && header.split(" ")[1];
     let email = null;
 
-    console.log(tasks);
-
     if (!token) {
         return res.status(403).json({"code": 403});
     }
@@ -64,7 +62,7 @@ async function handle(req, res) {
         }
 
         await user.save();
-        console.log(user);
+
         res.status(200).json({"code": 200});
 
 

@@ -31,14 +31,14 @@ async function loginHandler(req, res) {
     const accessToken = jwt.sign(
         {"email": find.email},
         process.env.ACCESS_TOKEN_SECRET,
-        {expiresIn: "1m"}
+        {expiresIn: "10m"}
         
     );
 
     const refreshToken = jwt.sign(
         {"email": find.email},
         process.env.REFRESH_TOKEN_SECRET,
-        {expiresIn: "30m"}
+        {expiresIn: "7d"}
         
     );
 
@@ -46,7 +46,7 @@ async function loginHandler(req, res) {
         httpOnly: true,
         sameSite: "lax",
         secure: false,
-        maxAge: 30 * 60 * 1000
+        maxAge: 7 * 24 * 60 * 60 * 1000
 
     });
 

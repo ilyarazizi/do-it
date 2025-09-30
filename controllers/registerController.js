@@ -33,8 +33,7 @@ async function handeNewUser(req, res) {
             "password": crypPass
         });
 
-        res.status(200).json({"code": 200});
-        console.log("ok");        
+        res.status(200).json({"code": 200});        
 
     } catch (err) {
 

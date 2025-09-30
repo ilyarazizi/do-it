@@ -10,7 +10,7 @@ async function handle(req, res) {
     let tasks = [];
     let isDone = [];
 
-    console.log(token);
+
 
     if (!token) {
         return res.status(403).json({"code": 403});
@@ -33,7 +33,6 @@ async function handle(req, res) {
 
         return res.status(400).json({"code": 400});
     }
-    console.log(user);
     count = user.userTasks.length;
 
     for (let i = 0; i < user.userTasks.length; i++) {

@@ -5,6 +5,7 @@ const add = document.querySelector(".add");
 const list = document.querySelector(".list");
 const item = document.querySelector(".list-item")
 const save = document.querySelector(".save");
+const alert = document.querySelector(".alert");
 import {auth} from "./authorization.js";
 let accessToken = null;
 
@@ -21,7 +22,6 @@ function setTasks(count, tasks, isDone) {
             clone.querySelector(".text-in").disabled = true;
 
         } else {
-            console.log("hello");
             clone.querySelector(".check").innerHTML = "⚪";
             clone.querySelector(".text-in").classList.remove("striked");
             clone.querySelector(".text-in").disabled = false;
@@ -41,7 +41,6 @@ async function getTasks() {
     await auth()
     const imp = await import("./authorization.js");
     accessToken = imp.accessToken;
-    console.log(accessToken);
     const res = await fetch("http://localhost:3500/get-tasks", {
 
         method: "GET",
@@ -52,10 +51,7 @@ async function getTasks() {
     const result = await res.json();
 
     if (result.code === 403) {
-        console.log("unahutrization");
-
-    } else if (result.code === 400) {
-        console.log("no tasks getted");
+        window.location.replace("http://localhost:3500/login");
 
     } else if (result.code === 200) {
         setTasks(result.count, result.tasks, result.isDone);
@@ -73,8 +69,6 @@ save.addEventListener("click", async () => {
 
     const imp = await import("./authorization.js");
     accessToken = imp.accessToken;
-
-    console.log(accessToken);
 
     tasks = [];
 
@@ -108,15 +102,43 @@ save.addEventListener("click", async () => {
 
     if (result.code === 403) {
 
-        console.log("unauthorization");
+        window.location.replace("http://localhost:3500/login");
 
     } else if (result.code === 500) {
+        alert.style.visibility = "visible";
+        alert.children[0].innerHTML = "server error!";
+        alert.children[0].style.color = "red";
+        setTimeout(() => {
+            alert.classList.add("show");
 
-        console.log("server erorr");
+        }, 2500);
+
+        setTimeout(() => {
+
+            alert.classList.remove("show");
+            alert.style.visibility = "hidden";
+        }, 3000)
+
+
 
     } else if (result.code === 200) {
+        alert.style.visibility = "visible";
+        alert.children[0].innerHTML = "tasks saved";
+        alert.children[0].style.color = "green";
 
-        console.log("saved");
+        setTimeout(() => {
+            alert.classList.add("show");
+
+        }, 2500);
+
+        setTimeout(() => {
+
+            alert.classList.remove("show");
+            alert.style.visibility = "hidden";
+        }, 3000);
+
+        
+
     }
 });
 

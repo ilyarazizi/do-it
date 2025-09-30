@@ -15,7 +15,7 @@ async function refresh() {
     if (result.code === 200) {
 
         accessToken = result.accessToken;
-        console.log(accessToken);
+
 
     } else {
 
@@ -43,8 +43,5 @@ export async function auth() {
 
         await refresh();
 
-    } else {
-
-        console.log("ok");
     }
 }
