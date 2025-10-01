@@ -142,15 +142,19 @@ span a{
     color: rgb(20, 187, 20);
 }
 
+.pass-btn-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: first baseline;
+}
 
 #pass-btn {
 
-    position: absolute;
     background-color: rgba(10, 10, 10, 0.1);
     border: none;
     font-size: 17px;
-    right: 20px;
-    top: 112px;
+    margin-top: 10px;
 }
 
 #notif-p {
@@ -276,10 +280,6 @@ span a{
         height: 30px;
     }
 
-    #pass-btn {
-
-        top: 125px;
-    }
 
     form {
 

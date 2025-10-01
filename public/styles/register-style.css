@@ -137,15 +137,19 @@ input {
     background-color: black;
 }
 
+.pass-btn-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: first baseline;
+}
 
 #pass-btn {
 
-    position: absolute;
     background-color: rgba(10, 10, 10, 0.1);
     border: none;
-    top: 240px;
-    right: 20px;
     font-size: 17px;
+    margin-top: 10px;
 }
 
 .notif-container {
@@ -266,10 +270,7 @@ input {
         height: 30px;
     }
 
-    #pass-btn {
 
-        top: 268px;
-    }
 
     form {
 
