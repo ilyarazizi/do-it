@@ -111,7 +111,7 @@ main {
     background-color: transparent;
     border: none;
     color: white;
-    top: 5px;
+    top: 8px;
 }
 
 .check:hover {
@@ -328,6 +328,7 @@ i {
         width: 180px;
         height: 40px;
     }
+
 
 
 }
