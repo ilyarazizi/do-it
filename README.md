@@ -1,17 +1,31 @@
-<h1>do-it</h1>
-a to do list web app built with <strong>node js (express js)</strong>
+# do-it
+a to do list web app built with node hs (express js)
 
-backend: node js (express js)
-frontend: html css javascript (no frameworks on in frontend)
-
-<h2>features</h2>
-
--REST api for sending and receiving data
-
--using mongodb atlas database
-
--resposive design (will be added)
-
+# features
+-using mongodb atlas databse
 -using jwt authorization
+-REST api for sending and receiving data
+-responsive design
 
- 
+
+## Prerequisites
+make sure you have the following installed:
+
+node js
+npm
+git
+
+
+
+# getting started
+```bash
+git clone https://github.com/ilyarazizi/do-it.git
+cd do-it
+create a .env file and write inside it :
+ACCESS_TOKEN_SECRET=<your access token secret>
+REFRESH_TOKEN_SECRET=<your refresh token secret>
+DATABASE_URL=<your database url>
+
+npm install
+npm start ```
+
