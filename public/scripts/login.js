@@ -42,26 +42,26 @@ submit.addEventListener("submit", async (e) => {
     });
 
     const result = await res.json();
-    loginContainer.style.height = "330px";
+    loginContainer.style.minHeightheight = "330px";
 
     if (result.code === 200) {
 
         accessToken = result.accessToken;
         notif.style.color = "rgb(20, 187, 20)";
-        loginContainer.style.height = "350px";
+
         notif.innerHTML = "loged in succsessfully";
         window.location.replace("https://do-it-e29m.onrender.com/to-do-list");
 
 
     } else if (result.code === 400) {
         notif.style.color = "red";
-        loginContainer.style.height = "350px";
+
         notif.innerHTML = "email and password are required";
         
     } else if (result.code === 401) {
 
         notif.style.color = "red";
-        loginContainer.style.height = "350px";
+
         notif.innerHTML = "no user with this email or password";
     }
 
