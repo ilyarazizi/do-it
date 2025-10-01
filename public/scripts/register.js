@@ -29,7 +29,7 @@ submit.addEventListener("submit", async (e) => {
     
     e.preventDefault();
 
-    const res = await fetch("http://localhost:3500/register-new-user", {
+    const res = await fetch("https://do-it-e29m.onrender.com/register-new-user", {
 
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -51,7 +51,7 @@ submit.addEventListener("submit", async (e) => {
 
         notif.style.color = "rgb(20, 187, 20)";
         notif.innerHTML = "registered successfully.";
-        window.location.replace("http://localhost:3500/home");
+        window.location.replace("https://do-it-e29m.onrender.com/home");
 
     } else if (result.code === 400) {
 
