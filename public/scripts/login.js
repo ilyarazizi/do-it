@@ -42,7 +42,7 @@ submit.addEventListener("submit", async (e) => {
     });
 
     const result = await res.json();
-    loginContainer.style.minHeightheight = "330px";
+    loginContainer.style.minHeight = "350px";
 
     if (result.code === 200) {
 

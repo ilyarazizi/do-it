@@ -45,7 +45,7 @@ submit.addEventListener("submit", async (e) => {
 
     const result = await res.json();
 
-    submit.style.minHeight = "370px";
+    submit.style.minHeight = "450px";
 
     if (result.code === 200) {
 
