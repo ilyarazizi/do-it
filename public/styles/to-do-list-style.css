@@ -87,6 +87,7 @@ main {
     border: 1px solid rgba(122, 122, 122, 0.8);
     border-radius: 8px ;
     margin-top: 15px;
+    margin-left: 10px;
     color: white;
     display: flex;
     
@@ -105,11 +106,12 @@ main {
 
 .check {
     position: absolute;
-    font-size: 2em;
-    right: 71vw;
+    font-size: 28px;
+    right: 70vw;
     background-color: transparent;
     border: none;
     color: white;
+    top: 5px;
 }
 
 .check:hover {
@@ -137,7 +139,8 @@ main {
 .delete {
 
     position: absolute;
-    font-size: 2em;
+    display: flex;
+    font-size: 30px;
     color: red;
     right: 2vw;
     cursor: pointer;
@@ -229,11 +232,17 @@ h2 {
     margin-top: 10px;
 }
 
+i {
+
+    width: 60px;
+    height: 60px;
+}
+
 @media screen and (min-width: 320px) and ( max-width: 700px) {
 
     body {
 
-        font-size: 0.7em;
+        font-size: 15px;
     }
 
     header {
@@ -267,44 +276,22 @@ h2 {
 
         font-size: 1.4em;
 }
-    .login-container {
-        margin-top: 150px;
-        width: 300px;
-    }
 
-    form {
-
-        width: 250px;
-
-    }
-
-
-    .button-container button {
-
-        width: 90px;
-    }
-
-
-    .list-container {
-
-        margin-top: 60px;
-    }
 
     .add-save {
 
-        margin-top: 80px;
+        margin-top: 100px;
         background-color: rgba(50, 50, 50, 0.8);
         
     }
 
     .add-save button {
 
-        width: 130px;
+        width: 170px;
         margin-top: 10px;
-        height: 40px;
+        height: 60px;
+
     }
-
-
 
 }
 
@@ -329,6 +316,14 @@ h2 {
 
         margin-bottom: 30px;
     }
+
+    .add-save button {
+
+        width: 180px;
+        height: 40px;
+    }
+
+
 }
 
 @media screen and (min-width: 1800px) and ( max-width: 2000px) {
@@ -336,6 +331,6 @@ h2 {
 
     body {
 
-        font-size: 1.2em;
+        font-size:19px;
     }
 }

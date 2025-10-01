@@ -143,9 +143,9 @@ input {
     position: absolute;
     background-color: rgba(10, 10, 10, 0.1);
     border: none;
-    top: 191px;
+    top: 240px;
     right: 20px;
-    font-size: 1.03em;
+    font-size: 17px;
 }
 
 .notif-container {
@@ -251,7 +251,7 @@ input {
 @media screen and (min-width: 1350px) and ( max-width: 1920px) {
     body {
 
-        font-size: 1.2em;
+        font-size: 19px;
     }
 
     .register-container {
@@ -268,7 +268,7 @@ input {
 
     #pass-btn {
 
-        top: 210px;
+        top: 268px;
     }
 
     form {

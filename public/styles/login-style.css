@@ -148,7 +148,7 @@ span a{
     position: absolute;
     background-color: rgba(10, 10, 10, 0.1);
     border: none;
-    font-size: 1.03em;
+    font-size: 17px;
     right: 20px;
     top: 112px;
 }
@@ -261,7 +261,7 @@ span a{
 @media screen and (min-width: 1350px) and ( max-width: 1920px) {
     body {
 
-        font-size: 1.2em;
+        font-size: 19px;
     }
 
     .login-container {
@@ -278,7 +278,7 @@ span a{
 
     #pass-btn {
 
-        top: 123px;
+        top: 125px;
     }
 
     form {
