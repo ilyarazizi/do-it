@@ -31,5 +31,5 @@ REFRESH_TOKEN_SECRET=<your refresh token secret>
 DATABASE_URL=<your database url>
 
 npm install
-npm start ```
+npm start 
 
