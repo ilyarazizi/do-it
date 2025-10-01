@@ -2,7 +2,7 @@ export let accessToken = null;
 
 async function refresh() {
 
-    const res = await fetch("http://localhost:3500/authorization-refresh", {
+    const res = await fetch("https://do-it-e29m.onrender.com/authorization-refresh", {
 
         method: "POST",
         credentials: "include"
