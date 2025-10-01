@@ -67,7 +67,7 @@ main {
 .register-container {
 
     width: 300px;
-    min-height: 370px;
+    height: 370px;
     margin-top: 100px;
     display: flex;
     justify-content: center;
