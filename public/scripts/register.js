@@ -23,7 +23,7 @@ function togglePassword() {
 
 }
 
-const submit = document.getElementById("submit-form");
+const submit = document.querySelector(".register-container");
 
 submit.addEventListener("submit", async (e) => {
     
@@ -50,26 +50,26 @@ submit.addEventListener("submit", async (e) => {
     if (result.code === 200) {
 
         notif.style.color = "rgb(20, 187, 20)";
-        submit.style.height = "400px";
+        submit.style.height = "420px";
         notif.innerHTML = "registered successfully.";
         window.location.replace("https://do-it-e29m.onrender.com/home");
 
     } else if (result.code === 400) {
 
         notif.style.color = "red";
-        submit.style.height = "400px";
+        submit.style.height = "420px";
         notif.innerHTML = "Please fill out all fields";
 
     } else if (result.code === 409) {
 
         notif.style.color = "red";
-        submit.style.height = "400px";
+        submit.style.height = "420px";
         notif.innerHTML = "user with this email is already existing.";
 
     } else if (result.code === 500) {
         
         notif.style.color = "red";
-        submit.style.height = "400px";
+        submit.style.height = "420px";
         notif.innerHTML = "server error. please try again later";
     }
 
