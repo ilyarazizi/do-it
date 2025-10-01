@@ -1,10 +1,13 @@
 # do-it
-a to do list web app built with node hs (express js)
+a to do list web app built with node js (express js)
 
-# features
+# features 📌
 -using mongodb atlas databse
+
 -using jwt authorization
+
 -REST api for sending and receiving data
+
 -responsive design
 
 
@@ -12,12 +15,13 @@ a to do list web app built with node hs (express js)
 make sure you have the following installed:
 
 node js
+
 npm
+
 git
 
 
-
-# getting started
+# getting started 🚀
 ```bash
 git clone https://github.com/ilyarazizi/do-it.git
 cd do-it
@@ -27,5 +31,5 @@ REFRESH_TOKEN_SECRET=<your refresh token secret>
 DATABASE_URL=<your database url>
 
 npm install
-npm start ```
+npm start 
 
