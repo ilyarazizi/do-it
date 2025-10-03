@@ -201,6 +201,7 @@ function addTask() {
     clone.querySelector(".text-in").classList.remove("striked");
     clone.querySelector(".text-in").disabled = false;
     clone.querySelector(".text-in").value = "";
+    clone.querySelector(".text-in").style.height = "40px";
     list.appendChild(clone);
 
 }
