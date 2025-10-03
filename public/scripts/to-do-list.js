@@ -188,7 +188,7 @@ for (let i of input) {
 
     i.addEventListener("input", () => {
 
-        i.style.height = "40px";
+        i.style.height = "auto";
         i.style.height = i.scrollHeight + "px";
         
     });
