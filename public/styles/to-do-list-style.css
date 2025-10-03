@@ -132,7 +132,6 @@ main {
     width: 55vw;
     padding-top: 10px;
     overflow-x: auto;
-    overflow-y: hidden;
     resize: none;
     
 }
