@@ -1,5 +1,5 @@
 const btn = document.querySelectorAll(".check");
-const input = document.querySelectorAll(".text-in");
+let input = document.querySelectorAll(".text-in");
 const del = document.querySelectorAll(".delete");
 const add = document.querySelector(".add");
 const list = document.querySelector(".list");
@@ -8,6 +8,18 @@ const save = document.querySelector(".save");
 const alert = document.querySelector(".alert");
 import {auth} from "./authorization.js";
 let accessToken = null;
+
+
+add.addEventListener("click", () => {
+    const clone = item.cloneNode(true);
+    clone.querySelector(".check").innerHTML = "⚪";
+    clone.querySelector(".text-in").classList.remove("striked");
+    clone.querySelector(".text-in").disabled = false;
+    clone.querySelector(".text-in").value = "";
+    clone.querySelector(".text-in").style.height = "40px";
+    list.appendChild(clone);
+
+});
 
 function setTasks(count, tasks, isDone) {
 
@@ -41,7 +53,7 @@ async function getTasks() {
     await auth()
     const imp = await import("./authorization.js");
     accessToken = imp.accessToken;
-    const res = await fetch("http://localhost:3500/get-tasks", {
+    const res = await fetch("https://do-it-e29m.onrender.com//get-tasks", {
 
         method: "GET",
         headers: {Authorization: `Bearer ${accessToken || ""}`}
@@ -51,7 +63,7 @@ async function getTasks() {
     const result = await res.json();
 
     if (result.code === 403) {
-        window.location.replace("http://localhost:3500/login");
+        window.location.replace("https://do-it-e29m.onrender.com//login");
 
     } else if (result.code === 200) {
         setTasks(result.count, result.tasks, result.isDone);
@@ -85,7 +97,7 @@ save.addEventListener("click", async () => {
 
     }
 
-    const res = await fetch("http://localhost:3500/save-tasks", {
+    const res = await fetch("https://do-it-e29m.onrender.com//save-tasks", {
 
         method: "POST",
 
@@ -102,7 +114,7 @@ save.addEventListener("click", async () => {
 
     if (result.code === 403) {
 
-        window.location.replace("http://localhost:3500/login");
+        window.location.replace("https://do-it-e29m.onrender.com//login");
 
     } else if (result.code === 500) {
         alert.style.visibility = "visible";
@@ -179,38 +191,20 @@ list.addEventListener("click", (event) => {
             event.target.parentElement.remove();
 
         }
+
     }
 });
 
 
+list.addEventListener("input", (e) => {
 
-for (let i of input) {
+    if (e.target.tagName === "TEXTAREA") {
 
-    i.addEventListener("input", () => {
+        input = document.querySelectorAll(".text-in");
+        for (let i of input) {
+            i.style.height = "40px";
+            i.style.height = i.scrollHeight + "px";
 
-        i.style.height = "40px";
-        i.style.height = i.scrollHeight + "px";
-        
-    });
-}
-
-function addTask() {
-
-    const clone = item.cloneNode(true);
-    clone.querySelector(".check").innerHTML = "⚪";
-    clone.querySelector(".text-in").classList.remove("striked");
-    clone.querySelector(".text-in").disabled = false;
-    clone.querySelector(".text-in").value = "";
-    list.appendChild(clone);
-
-}
-
-add.addEventListener("click", () => {
-    const clone = item.cloneNode(true);
-    clone.querySelector(".check").innerHTML = "⚪";
-    clone.querySelector(".text-in").classList.remove("striked");
-    clone.querySelector(".text-in").disabled = false;
-    clone.querySelector(".text-in").value = "";
-    list.appendChild(clone);
-
+        }
+    }
 });
