@@ -28,7 +28,7 @@ submit.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
-    const res = await fetch("https://do-it-e29m.onrender.com/login-handle", {
+    const res = await fetch("http://localhost:3500/login-handle", {
 
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -50,7 +50,7 @@ submit.addEventListener("submit", async (e) => {
         notif.style.color = "rgb(20, 187, 20)";
 
         notif.innerHTML = "loged in succsessfully";
-        window.location.replace("https://do-it-e29m.onrender.com/to-do-list");
+        window.location.replace("http://localhost:3500/to-do-list");
 
 
     } else if (result.code === 400) {

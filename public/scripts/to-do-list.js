@@ -53,7 +53,7 @@ async function getTasks() {
     await auth()
     const imp = await import("./authorization.js");
     accessToken = imp.accessToken;
-    const res = await fetch("https://do-it-e29m.onrender.com/get-tasks", {
+    const res = await fetch("http://localhost:3500/get-tasks", {
 
         method: "GET",
         headers: {Authorization: `Bearer ${accessToken || ""}`}
@@ -63,7 +63,7 @@ async function getTasks() {
     const result = await res.json();
 
     if (result.code === 403) {
-        window.location.replace("https://do-it-e29m.onrender.com/login");
+        window.location.replace("http://localhost:3500/login");
 
     } else if (result.code === 200) {
         setTasks(result.count, result.tasks, result.isDone);
@@ -97,7 +97,7 @@ save.addEventListener("click", async () => {
 
     }
 
-    const res = await fetch("https://do-it-e29m.onrender.com/save-tasks", {
+    const res = await fetch("http://localhost:3500/save-tasks", {
 
         method: "POST",
 
@@ -114,7 +114,7 @@ save.addEventListener("click", async () => {
 
     if (result.code === 403) {
 
-        window.location.replace("https://do-it-e29m.onrender.com/login");
+        window.location.replace("http://localhost:3500/login");
 
     } else if (result.code === 500) {
         alert.style.visibility = "visible";

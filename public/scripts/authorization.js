@@ -2,7 +2,7 @@ export let accessToken = null;
 
 async function refresh() {
 
-    const res = await fetch("https://do-it-e29m.onrender.com/authorization-refresh", {
+    const res = await fetch("http://localhost:3500/authorization-refresh", {
 
         method: "POST",
         credentials: "include"
@@ -19,14 +19,14 @@ async function refresh() {
 
     } else {
 
-        window.location.replace("https://do-it-e29m.onrender.com/login");
+        window.location.replace("http://localhost:3500/login");
     }
 }
 
 export async function auth() {
 
 
-    const res = await fetch("https://do-it-e29m.onrender.com/authorization", {
+    const res = await fetch("http://localhost:3500/authorization", {
     
         method: "POST",
         headers: {
